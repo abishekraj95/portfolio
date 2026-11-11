@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Abishek Sudhakara | Mechanical Engineer portfolio showcasing product development, manufacturing, tooling, and automation projects."
+    />
+    <title>Abishek Sudhakara | Mechanical Engineer</title>
+    <style>
+      :root {
+        --bg: #f4f1ea;
+        --panel: #fffdf9;
+        --panel-strong: #f0eadf;
+        --ink: #18231d;
+        --muted: #596861;
+        --line: rgba(24, 35, 29, 0.12);
+        --sage: #a9c4a2;
+        --green: #2d4a3d;
+        --olive: #5d6c43;
+        --accent: #d68f5b;
+        --shadow: 0 24px 55px rgba(24, 35, 29, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(244, 241, 234, 0.9);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+      }
+
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+
+      .brand span {
+        color: var(--accent);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .nav a {
+        transition: color 0.2s ease;
+      }
+
+      .nav a:hover {
+        color: var(--ink);
+      }
+
+      .hero {
+        padding: 72px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 46px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--green);
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3rem, 6vw, 5rem);
+        line-height: 0.94;
+        letter-spacing: -0.06em;
+      }
+
+      .highlight {
+        color: var(--olive);
+      }
+
+      .lead {
+        max-width: 620px;
+        margin-top: 22px;
+        font-size: 1.08rem;
+        color: var(--muted);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 22px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: var(--green);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .button.secondary {
+        background: transparent;
+        border: 1px solid var(--line);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        gap: 18px;
+        margin-top: 44px;
+      }
+
+      .metric {
+        background: rgba(255, 255, 255, 0.42);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 16px;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.65rem;
+        letter-spacing: -0.05em;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 540px;
+        background: linear-gradient(135deg, rgba(108, 131, 103, 0.14), rgba(255, 255, 255, 0.4));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .image-slot {
+        position: absolute;
+        inset: 24px 24px 24px 24px;
+        border-radius: 22px;
+        border: 1px dashed rgba(24, 35, 29, 0.28);
+        background:
+          linear-gradient(135deg, rgba(255,255,255,0.78), rgba(168, 191, 159, 0.18)),
+          repeating-linear-gradient(
+            45deg,
+            rgba(24, 35, 29, 0.04),
+            rgba(24, 35, 29, 0.04) 12px,
+            transparent 12px,
+            transparent 24px
+          );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
+      .floating-card {
+        position: absolute;
+        right: 22px;
+        bottom: 26px;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px 16px;
+        box-shadow: 0 20px 35px rgba(18, 28, 23, 0.08);
+      }
+
+      .floating-card strong {
+        display: block;
+        font-size: 1.4rem;
+        letter-spacing: -0.05em;
+      }
+
+      .section {
+        padding: 42px 0 12px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 22px;
+        margin-bottom: 26px;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .section-heading p {
+        margin: 0;
+        max-width: 520px;
+        color: var(--muted);
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px;
+      }
+
+      .project-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 18px 35px rgba(16, 23, 20, 0.04);
+      }
+
+      .project-visual {
+        height: 250px;
+        background: linear-gradient(135deg, rgba(161, 172, 152, 0.28), rgba(255,255,255,0.6));
+        border-bottom: 1px solid var(--line);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .project-visual::before {
+        content: "Project photo / render";
+        position: absolute;
+        inset: 18px 18px auto auto;
+        background: rgba(255,255,255,0.72);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 10px;
+        font-size: 0.66rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .project-visual::after {
+        content: "";
+        width: 76%;
+        height: 58%;
+        border: 2px dashed rgba(24, 35, 29, 0.2);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.24);
+      }
+
+      .project-content {
+        padding: 24px 22px 26px;
+      }
+
+      .project-tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--green);
+        margin-bottom: 12px;
+      }
+
+      .project-content h3 {
+        margin: 0 0 10px;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        letter-spacing: -0.04em;
+      }
+
+      .project-content p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .project-list {
+        margin: 18px 0 0;
+        padding-left: 18px;
+        color: var(--ink);
+      }
+
+      .project-list li + li {
+        margin-top: 8px;
+      }
+
+      .experience {
+        margin-top: 16px;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 18px;
+      }
+
+      .timeline-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 22px 20px;
+      }
+
+      .timeline-card h3 {
+        margin: 0 0 8px;
+        font-size: 1.2rem;
+      }
+
+      .timeline-card .meta {
+        color: var(--green);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .timeline-card p {
+        margin: 12px 0 0;
+        color: var(--muted);
+      }
+
+      .capabilities {
+        background: var(--panel-strong);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        margin-top: 26px;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .skill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.25);
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .contact {
+        padding: 52px 0 80px;
+      }
+
+      .contact-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        padding: 30px 28px;
+        border-radius: 26px;
+        background: linear-gradient(135deg, var(--green), #233d32);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .contact-card h2 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .contact-card p {
+        margin: 0;
+        color: rgba(255,255,255,0.78);
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .projects,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          gap: 14px;
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .topbar-inner,
+        .section-heading,
+        .contact-card {
+          display: block;
+        }
+
+        .nav {
+          margin-top: 10px;
+          flex-wrap: wrap;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 48px;
+        }
+
+        .hero-visual {
+          min-height: 360px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="page-shell topbar-inner">
+        <a href="#top" class="brand">Abishek <span>Sudhakara</span></a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Mechanical Design · Product Development</div>
+            <h1>
+              Building <span class="highlight">practical</span><br />
+              engineering solutions.
+            </h1>
+            <p class="lead">
+              I’m a mechanical engineer focused on turning product concepts into
+              manufacturable, testable, and reliable hardware. My work spans CAD
+              design, prototyping, manufacturing support, tooling, and process
+              improvement across industrial and product development environments.
+            </p>
+
+            <div class="cta-row">
+              <a href="#projects" class="button primary">View projects</a>
+              <a href="#contact" class="button secondary">Get in touch</a>
+            </div>
+
+            <div class="metrics" aria-label="Highlights">
+              <div class="metric">
+                <strong>4+</strong>
+                <span>Years in design & development</span>
+              </div>
+              <div class="metric">
+                <strong>6+</strong>
+                <span>Product & tooling projects</span>
+              </div>
+              <div class="metric">
+                <strong>10%</strong>
+                <span>Production efficiency gains</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Profile image area">
+            <div class="image-slot">Add a professional image here</div>
+            <div class="floating-card">
+              <span class="eyebrow" style="margin-bottom: 0;">Focus</span>
+              <strong>DFM</strong>
+              <span style="color: var(--muted);">Design for manufacturability</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Selected work</div>
+            <h2>Featured projects.</h2>
+          </div>
+          <p>
+            A selection of hands-on product and manufacturing work spanning concept
+            development, prototyping, validation, and design improvement.
+          </p>
+        </div>
+
+        <div class="projects">
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Product redesign</span>
+              <h3>Lightweight Portable Pump</h3>
+              <p>
+                Redesigned a portable two-stroke pump with a focus on reducing weight
+                while maintaining structural strength, performance, and manufacturability.
+              </p>
+              <ul class="project-list">
+                <li>Explored high-performance plastics as alternatives to conventional materials.</li>
+                <li>Evaluated geometry, wall thickness, and injection-molding constraints.</li>
+                <li>Coordinated prototyping, supplier discussion, and a 100-hour validation trial.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Automation</span>
+              <h3>Automated Hose-Marking System</h3>
+              <p>
+                Developed a semi-automated hose-marking process to improve repeatability,
+                reduce manual effort, and support production consistency.
+              </p>
+              <ul class="project-list">
+                <li>Designed mechanical fixtures for roller and tensioning arrangement.</li>
+                <li>Integrated piezoelectric printing, UV curing, encoder feedback, and PLC controls.</li>
+                <li>Focused on operator safety, process reliability, and manufacturing practicality.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Tooling</span>
+              <h3>Manufacturing Fixtures &amp; Tooling</h3>
+              <p>
+                Designed practical jigs and fixtures to streamline production, improve
+                accuracy, and simplify operator handling in manufacturing lines.
+              </p>
+              <ul class="project-list">
+                <li>Developed production-ready fixtures tailored to process constraints.</li>
+                <li>Improved repeatability and reduced assembly variability.</li>
+                <li>Supported troubleshooting and continuous improvement initiatives.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Simulation</span>
+              <h3>Piezoelectric Patch Analysis</h3>
+              <p>
+                Conducted engineering simulation and physical validation to assess the mechanical
+                behavior of a zinc oxide piezoelectric patch under loading conditions.
+              </p>
+              <ul class="project-list">
+                <li>Worked with ANSYS for mechanical simulation and structural assessment.</li>
+                <li>Correlated finite element insights with physical validation.</li>
+                <li>Built a stronger understanding of material behavior and engineering analysis.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Engineering in industry.</h2>
+          </div>
+          <p>
+            Experience across automotive manufacturing, special-purpose machinery, and product development.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-card">
+            <div class="meta">2023 — Present</div>
+            <h3>Mercedes Textiles Limited</h3>
+            <p>
+              Technical Coordinator — Mechanical Product Development, contributing from concept
+              development through CAD, prototyping, testing, and manufacturing support.
+            </p>
+          </div>
+
+          <div class="timeline-card">
+            <div class="meta">2018 — 2019</div>
+            <h3>Bosch Limited</h3>
+            <p>
+              Graduate Apprentice — Design Engineering, supporting design and development for
+              special-purpose machinery, fixtures, tools, and assembly systems.
+            </p>
+          </div>
+
+          <div class="timeline-card">
+            <div class="meta">2018</div>
+            <h3>Continental AG</h3>
+            <p>
+              Engineering Intern, supporting manufacturing engineering activities in ECU and ABS
+              production, including lean improvement and cycle-time analysis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="capabilities section">
+        <div class="page-shell" style="padding: 44px 0;">
+          <div class="section-heading" style="margin-bottom: 0;">
+            <div>
+              <div class="eyebrow">Core strengths</div>
+              <h2>Capabilities.</h2>
+            </div>
+          </div>
+
+          <div class="skills" aria-label="Skills list">
+            <span class="skill">SolidWorks</span>
+            <span class="skill">Autodesk Inventor</span>
+            <span class="skill">CATIA</span>
+            <span class="skill">AutoCAD</span>
+            <span class="skill">ANSYS</span>
+            <span class="skill">FEA Fundamentals</span>
+            <span class="skill">GD&amp;T</span>
+            <span class="skill">DFM</span>
+            <span class="skill">Prototyping</span>
+            <span class="skill">Fixtures &amp; Tooling</span>
+            <span class="skill">Automation</span>
+            <span class="skill">PLC Systems</span>
+            <span class="skill">Injection Molding</span>
+            <span class="skill">Manufacturing Support</span>
+            <span class="skill">Python</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="contact-card">
+          <div>
+            <div class="eyebrow" style="color: rgba(255,255,255,0.72);">Let’s connect</div>
+            <h2>Have a product challenge?</h2>
+            <p>I’m open to opportunities in mechanical design, product development, and manufacturing engineering.</p>
+          </div>
+          <a href="mailto:youremail@example.com" class="button primary" style="background: white; color: var(--green);">Email Me</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
