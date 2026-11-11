@@ -1,38 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Abishek Sudhakara — Mechanical Designer focused on product development, mechanical design and manufacturing." />
-<title>Abishek Sudhakara — Mechanical Design Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#17221f;--muted:#68746e;--paper:#f5f5ef;--white:#fff;--line:#dce1d9;--lime:#c9f36a;--green:#244d3c;--orange:#f28b57;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Manrope',sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:800 15px var(--display);letter-spacing:-.04em}.brand span{color:#77934a}.nav{display:flex;gap:30px;font-size:13px;color:#53615a}.nav a:hover{color:#111}.availability{font:11px var(--mono);text-transform:uppercase;letter-spacing:.08em;display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;background:#6f9d54;border-radius:50%;display:inline-block}
-.hero{padding:84px 0 76px;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}.eyebrow,.kicker{font:11px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:#728078}.eyebrow{display:flex;align-items:center;gap:12px}.eyebrow:before{content:'';height:1px;width:30px;background:var(--orange)}h1{font:700 clamp(52px,7vw,90px)/.98 var(--display);letter-spacing:-.075em;margin:25px 0 26px;max-width:750px}h1 em{font-style:normal;color:#78934e}.intro{font-size:18px;line-height:1.65;color:#53615a;max-width:570px}.hero-actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}.btn{padding:13px 18px;border:1px solid var(--ink);font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:16px;transition:.2s}.btn.primary{background:var(--ink);color:white}.btn:hover{transform:translateY(-2px)}.hero-art{background:#dfe7d7;min-height:390px;position:relative;overflow:hidden;border-radius:3px}.hero-art:before{content:'DESIGN / ENGINEERING';position:absolute;top:20px;left:22px;font:10px var(--mono);letter-spacing:.12em;color:#68796b}.hero-art svg{width:100%;height:100%;position:absolute;inset:0}.art-label{position:absolute;bottom:18px;right:20px;background:var(--lime);padding:9px 12px;font:10px var(--mono);letter-spacing:.06em}
-.marquee{background:var(--ink);color:#e8eee5;padding:17px 0;font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase}.marquee .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.section{padding:94px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px;gap:30px}.section-head h2{font:700 clamp(34px,4vw,52px)/1.05 var(--display);letter-spacing:-.06em;margin:12px 0 0}.section-head p{color:var(--muted);font-size:14px;max-width:360px;margin:0}.projects{display:grid;grid-template-columns:1fr 1fr;gap:22px}.project{background:var(--white);border:1px solid var(--line);min-width:0}.project.feature{grid-column:span 2;display:grid;grid-template-columns:1.1fr .9fr}.visual{min-height:270px;background:#e6ebe3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.project.feature .visual{min-height:390px}.visual svg{width:100%;height:100%;position:absolute;inset:0}.visual .placeholder{position:absolute;bottom:14px;left:16px;background:rgba(255,255,255,.9);padding:7px 10px;font:9px var(--mono);letter-spacing:.08em;color:#53615a}.visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.project-body{padding:27px 28px 30px}.project.feature .project-body{padding:38px}.project-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.number{font:11px var(--mono);color:#8b958d}.tag{font:9px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:#63736a;background:#eef2eb;padding:6px 8px}.project h3{font:700 26px/1.15 var(--display);letter-spacing:-.045em;margin:20px 0 12px}.project.feature h3{font-size:34px}.project p{font-size:14px;color:#637069;margin:0 0 22px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chips span{font:9px var(--mono);border:1px solid var(--line);padding:6px 8px;color:#58645d}.project-link{display:inline-flex;gap:10px;align-items:center;margin-top:25px;font-size:12px;font-weight:700;border-bottom:1px solid #aab4aa;padding-bottom:5px}.case-note{font-size:12px;color:#839087;margin-top:18px}
-.process{background:#e8ece4}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d4dbd1;border:1px solid #d4dbd1;margin-top:38px}.process-item{background:#e8ece4;padding:25px 22px;min-height:180px}.process-item b{font:11px var(--mono);color:#7c8e70}.process-item h3{font:700 18px var(--display);margin:22px 0 8px;letter-spacing:-.03em}.process-item p{font-size:12px;color:#66736a;margin:0}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.about-grid h2{font:700 48px/.98 var(--display);letter-spacing:-.065em;margin:15px 0}.about-copy{font-size:16px;color:#58655e;max-width:660px}.about-copy p{margin:0 0 18px}.skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:30px}.skill-group{border-top:1px solid var(--line);padding-top:15px}.skill-group h4{font:10px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:#738078;margin:0 0 12px}.skill-group p{font-size:13px;color:#35433b;margin:0}.education{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px}.edu{border:1px solid var(--line);padding:15px 18px;flex:1;min-width:210px}.edu b{font:12px var(--display)}.edu span{display:block;color:#748077;font-size:11px;margin-top:4px}
-.contact{background:var(--ink);color:#f5f6f0;padding:80px 0}.contact .kicker{color:#a8b6aa}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}.contact h2{font:700 clamp(42px,6vw,68px)/.98 var(--display);letter-spacing:-.07em;margin:15px 0 18px}.contact p{color:#bdc9c0;max-width:460px;font-size:14px}.contact-links{display:flex;flex-direction:column;gap:0}.contact-links a{padding:16px 0;border-bottom:1px solid #43534a;display:flex;justify-content:space-between;font-size:14px}.contact-links small{font:10px var(--mono);color:#aab8ae}.footer{padding:22px 0;color:#829087;font:10px var(--mono);display:flex;justify-content:space-between;gap:20px}
-@media(max-width:800px){.hero{grid-template-columns:1fr;gap:35px;padding:60px 0}.hero-art{min-height:300px}.projects{grid-template-columns:1fr}.project.feature{grid-column:auto;grid-template-columns:1fr}.project.feature .visual{min-height:290px}.project.feature .project-body{padding:27px}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:18px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.process-grid{grid-template-columns:1fr 1fr}.nav{gap:14px}.nav a:nth-child(2){display:none}}
-@media(max-width:520px){.wrap{width:min(100% - 32px,1180px)}.nav{font-size:11px;gap:10px}.availability{display:none}h1{font-size:54px}.intro{font-size:16px}.process-grid,.skill-groups{grid-template-columns:1fr}.footer{display:block}.footer span{display:block;margin-top:8px}}
-</style>
-</head>
-<body>
-<header class="wrap topbar"><a class="brand" href="#home">AS<span>.</span> / ENGINEERING</a><nav class="nav"><a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact ↗</a></nav><div class="availability"><i class="dot"></i> OTTAWA, CANADA</div></header>
-<main id="home">
-<section class="wrap hero"><div><div class="eyebrow">Mechanical design · Product development</div><h1>Ideas into<br><em>real things.</em></h1><p class="intro">I’m Abishek Sudhakara — a mechanical engineering professional who enjoys turning complex design challenges into practical, manufacturable products.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work <span>↘</span></a><a class="btn" href="#contact">Get in touch <span>↗</span></a></div></div>
-<div class="hero-art"><svg viewBox="0 0 560 440" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="#355342" stroke-width="1.4"><path d="M85 320 280 90l195 230-195 70L85 320Z"/><path d="m85 320 195-80 195 80M280 90v150m0 150V90M85 320l195-230m195 230L280 90" opacity=".55"/><circle cx="280" cy="240" r="94"/><circle cx="280" cy="240" r="66"/><circle cx="280" cy="240" r="17"/><path d="M280 146v-56m94 150h101M280 334v56M186 240H85" stroke-dasharray="4 6"/><path d="m252 210 28-30 28 30v60l-28 30-28-30v-60Z"/><path d="M280 180v120m-28-90h56m-56 60h56"/></g><g fill="#78934e"><circle cx="85" cy="320" r="5"/><circle cx="280" cy="90" r="5"/><circle cx="475" cy="320" r="5"/></g><g fill="#f28b57"><circle cx="280" cy="240" r="6"/><path d="M390 102h56v2h-56z"/></g><g stroke="#8b9d8b" stroke-width=".8" opacity=".7"><path d="M35 365h490M35 375h490M50 55v330M60 55v330" stroke-dasharray="2 7"/></g></svg><div class="art-label">THINK · DESIGN · BUILD · REFINE</div></div></section>
-<div class="marquee"><div class="wrap"><span>Product development</span><span>✳</span><span>Mechanical design</span><span>✳</span><span>Prototyping & validation</span><span>✳</span><span>Manufacturing engineering</span></div></div>
-<section class="wrap section" id="work"><div class="section-head"><div><div class="kicker">01 / Selected projects</div><h2>Engineering in action.</h2></div><p>A selection of hands-on design and manufacturing projects. Each case study can be expanded with original CAD, prototype, test and production images.</p></div>
-<div class="projects">
-<article class="project feature"><div class="visual"><svg viewBox="0 0 650 400" xmlns="http://www.w3.org/2000/svg"><rect width="650" height="400" fill="#e1e9df"/><g fill="none" stroke="#46624e" stroke-width="2"><path d="M130 255 190 150l175-35 112 65-25 115-180 40-142-45Z"/><path d="m190 150 18 111 164 34 80-85-87-95m-157 146 90-85 164 0m-254 0 165-86m-165 86v-54l174-41 112 65v95"/><circle cx="220" cy="275" r="35"/><circle cx="220" cy="275" r="14"/><circle cx="420" cy="280" r="35"/><circle cx="420" cy="280" r="14"/><path d="M250 155h100v-42h-100zM365 180v-62m-175 32-30-45"/></g><g stroke="#f28b57" stroke-width="2"><path d="M325 110V55h95M450 295h90v-50" stroke-dasharray="5 5"/></g><g fill="#46624e"><circle cx="190" cy="150" r="5"/><circle cx="477" cy="180" r="5"/><circle cx="302" cy="335" r="5"/></g><text x="35" y="35" fill="#64796a" font-family="monospace" font-size="11">CONCEPT / MECHANICAL ASSEMBLY STUDY</text></svg><div class="placeholder">REPLACE WITH PUMP CAD / PROTOTYPE PHOTO</div></div><div class="project-body"><div class="project-top"><span class="number">PROJECT 01 — FEATURED</span><span class="tag">Product development</span></div><h3>Portable 2-stroke pump redesign</h3><p>Product redesign work focused on lightweight construction, high-temperature polymer requirements, injection-moulding feasibility and prototype validation.</p><div class="chips"><span>SolidWorks</span><span>Injection moulding</span><span>DFM</span><span>Prototype testing</span></div><a class="project-link" href="#pump-details">Explore case study <span>↗</span></a><div class="case-note" id="pump-details">100-hour prototype run · Geometry refinements · Assembly jig development</div></div></article>
-<article class="project"><div class="visual"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg"><rect width="520" height="300" fill="#e8e8dd"/><g fill="none" stroke="#435f4c" stroke-width="2"><rect x="75" y="110" width="365" height="105" rx="4"/><path d="M95 135h325M95 190h325M135 110V80h90v30m65 0V80h90v30"/><circle cx="145" cy="163" r="23"/><circle cx="375" cy="163" r="23"/><path d="M168 163h184m-92-53v105m-30-105v105m60-105v105"/><path d="M235 215v35m55-35v35m-95 0h190"/></g><path d="M300 78h110" stroke="#f28b57" stroke-width="3" stroke-dasharray="5 5"/><text x="22" y="28" fill="#718276" font-family="monospace" font-size="10">PROCESS AUTOMATION / CONCEPT</text></svg><div class="placeholder">REPLACE WITH MARKING LINE PHOTO</div></div><div class="project-body"><div class="project-top"><span class="number">PROJECT 02</span><span class="tag">Automation</span></div><h3>Automated hose-marking system</h3><p>Replacing manual wooden dies with a piezoelectric printing and UV-curing process, supported by roller handling, encoder feedback and PLC integration.</p><div class="chips"><span>Mechanism design</span><span>PLC integration</span><span>Process improvement</span></div><a class="project-link" href="#contact">View project details <span>↗</span></a></div></article>
-<article class="project"><div class="visual"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg"><rect width="520" height="300" fill="#e3e9e3"/><g stroke="#4b6653" stroke-width="2" fill="none"><path d="M75 210h370M95 210V92h330v118M120 92v118m55-118v118m55-118v118m55-118v118m55-118v118m55-118v118m55-118v118"/><path d="M80 80h360M80 70v20m360-20v20M110 230v25m300-25v25M95 255h330"/><rect x="140" y="115" width="45" height="30"/><rect x="250" y="115" width="45" height="30"/><rect x="360" y="115" width="45" height="30"/></g><g fill="#f28b57"><circle cx="120" cy="92" r="4"/><circle cx="230" cy="92" r="4"/><circle cx="340" cy="92" r="4"/></g><text x="22" y="28" fill="#718276" font-family="monospace" font-size="10">FIXTURE / LOOM WIDTH CONTROL</text></svg><div class="placeholder">REPLACE WITH JIG / LOOM PHOTO</div></div><div class="project-body"><div class="project-top"><span class="number">PROJECT 03</span><span class="tag">Tooling & fixtures</span></div><h3>Flat-width manufacturing jig</h3><p>Designed and implemented a flat-width jig across 32 looms to support consistent manufacturing output, quality and operator workflow.</p><div class="chips"><span>Fixture design</span><span>Manufacturing</span><span>Problem solving</span></div><a class="project-link" href="#contact">View project details <span>↗</span></a></div></article>
-<article class="project"><div class="visual"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg"><rect width="520" height="300" fill="#e7e8df"/><g fill="none" stroke="#435f4c" stroke-width="2"><path d="M100 70h320v170H100zM130 95h260v120H130z"/><path d="M155 120h210v72H155zM180 135h160v42H180z"/><circle cx="155" cy="235" r="12"/><circle cx="365" cy="235" r="12"/><path d="M210 95v-25m100 25v-25m-100 0h100"/><path d="M235 135v42m50-42v42"/></g><path d="M210 55h100" stroke="#f28b57" stroke-width="3"/><text x="22" y="28" fill="#718276" font-family="monospace" font-size="10">AUTOMOTIVE ASSEMBLY TOOLING</text></svg><div class="placeholder">REPLACE WITH FIXTURE / STATION PHOTO</div></div><div class="project-body"><div class="project-top"><span class="number">PROJECT 04</span><span class="tag">Automotive</span></div><h3>Automotive assembly tooling</h3><p>Supported tooling and assembly fixtures for ECU and tandem master-cylinder manufacturing, including multi-station assembly and leak-test arrangements.</p><div class="chips"><span>Assembly tooling</span><span>Inventor</span><span>Leak testing</span></div><a class="project-link" href="#contact">View project details <span>↗</span></a></div></article>
-<article class="project"><div class="visual"><svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg"><rect width="520" height="300" fill="#e6eae2"/><g fill="none" stroke="#46624e" stroke-width="2"><path d="M120 215 250 70l150 145-150 40-130-40Z"/><path d="m120 215 130-65 150 65M250 70v80m0 160v-35m-130-60 130-65 150 65"/><path d="M180 190q70-70 140 0t80 0" stroke="#f28b57" stroke-dasharray="5 5"/><circle cx="250" cy="150" r="15"/><circle cx="250" cy="150" r="50" opacity=".4"/></g><text x="22" y="28" fill="#718276" font-family="monospace" font-size="10">SIMULATION / EXPERIMENTAL VALIDATION</text></svg><div class="placeholder">REPLACE WITH ANSYS / LAB IMAGE</div></div><div class="project-body"><div class="project-top"><span class="number">PROJECT 05</span><span class="tag">Research</span></div><h3>Piezoelectric sensor development</h3><p>University research on ZnO piezoelectric patches, combining ANSYS simulation with physical experimentation and validation.</p><div class="chips"><span>ANSYS</span><span>Simulation</span><span>Validation</span></div><a class="project-link" href="#contact">View project details <span>↗</span></a></div></article>
-</div></section>
-<section class="process section" id="approach"><div class="wrap"><div class="kicker">02 / How I work</div><div class="section-head"><h2>From first sketch<br>to shop floor.</h2><p>I enjoy working across the boundaries of design and manufacturing — where engineering decisions become physical outcomes.</p></div><div class="process-grid"><div class="process-item"><b>01 / UNDERSTAND</b><h3>Define the problem</h3><p>Clarify requirements, constraints, user needs and the real-world operating environment.</p></div><div class="process-item"><b>02 / DESIGN</b><h3>Develop the solution</h3><p>Explore concepts, model components, assess materials and design for manufacturability.</p></div><div class="process-item"><b>03 / VALIDATE</b><h3>Build and test</h3><p>Prototype, evaluate performance, investigate failures and refine the design.</p></div><div class="process-item"><b>04 / IMPLEMENT</b><h3>Make it repeatable</h3><p>Work with suppliers and production teams to support tooling, assembly and implementation.</p></div></div></div></section>
-<section class="wrap section" id="about"><div class="about-grid"><div><div class="kicker">03 / About</div><h2>Curious by nature.<br>Practical by design.</h2></div><div class="about-copy"><p>I’m a mechanical engineering professional with experience spanning product development, mechanical design, manufacturing support and process improvement. I’m most energized by work that moves beyond the screen — developing a concept, making a prototype, understanding what went wrong and improving the next iteration.</p><p>My background combines a Canadian master’s degree in mechanical engineering with hands-on industry experience in product design and manufacturing environments.</p><div class="skill-groups"><div class="skill-group"><h4>Design & CAD</h4><p>SolidWorks · DraftSight · Autodesk Inventor · Engineering drawings</p></div><div class="skill-group"><h4>Product development</h4><p>DFM · Injection moulding · Prototyping · Design iteration</p></div><div class="skill-group"><h4>Manufacturing</h4><p>Fixtures & jigs · Tooling · Machining · Fabrication · Assembly</p></div><div class="skill-group"><h4>Analysis & process</h4><p>ANSYS · FEA fundamentals · Tolerance analysis · Automation</p></div></div><div class="education"><div class="edu"><b>M.Eng. Mechanical Engineering</b><span>Concordia University · 2022</span></div><div class="edu"><b>B.Eng. Mechanical Engineering</b><span>RNS Institute of Technology · 2018</span></div></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="kicker">04 / Contact</div><h2>Have a good<br>engineering problem?</h2><p>I’m interested in mechanical design and product development opportunities where I can contribute to turning ideas into robust, manufacturable products.</p></div><div class="contact-links"><a href="mailto:YOUR.EMAIL@example.com"><span>Email me</span><small>YOUR.EMAIL@example.com ↗</small></a><a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noopener"><span>LinkedIn</span><small>VIEW PROFILE ↗</small></a><a href="YOUR-RESUME-FILE.pdf" target="_blank"><span>Download resume</span><small>PDF · ADD YOUR RESUME ↗</small></a></div></div></section>
-</main><footer class="wrap footer"><span>© 2026 ABISHEK SUDAKARA</span><span>MECHANICAL DESIGN / PRODUCT DEVELOPMENT</span><span>BUILT WITH INTENTION.</span></footer>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Abishek Sudhakara | Mechanical Engineer portfolio showcasing product development, manufacturing, tooling, and automation projects."
+    />
+    <title>Abishek Sudhakara | Mechanical Engineer</title>
+    <style>
+      :root {
+        --bg: #f4f1ea;
+        --panel: #fffdf9;
+        --panel-strong: #f0eadf;
+        --ink: #18231d;
+        --muted: #596861;
+        --line: rgba(24, 35, 29, 0.12);
+        --sage: #a9c4a2;
+        --green: #2d4a3d;
+        --olive: #5d6c43;
+        --accent: #d68f5b;
+        --shadow: 0 24px 55px rgba(24, 35, 29, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(244, 241, 234, 0.9);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+      }
+
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+
+      .brand span {
+        color: var(--accent);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .nav a {
+        transition: color 0.2s ease;
+      }
+
+      .nav a:hover {
+        color: var(--ink);
+      }
+
+      .hero {
+        padding: 72px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 46px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--green);
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3rem, 6vw, 5rem);
+        line-height: 0.94;
+        letter-spacing: -0.06em;
+      }
+
+      .highlight {
+        color: var(--olive);
+      }
+
+      .lead {
+        max-width: 620px;
+        margin-top: 22px;
+        font-size: 1.08rem;
+        color: var(--muted);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 22px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: var(--green);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .button.secondary {
+        background: transparent;
+        border: 1px solid var(--line);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        gap: 18px;
+        margin-top: 44px;
+      }
+
+      .metric {
+        background: rgba(255, 255, 255, 0.42);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 16px;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.65rem;
+        letter-spacing: -0.05em;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 540px;
+        background: linear-gradient(135deg, rgba(108, 131, 103, 0.14), rgba(255, 255, 255, 0.4));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .image-slot {
+        position: absolute;
+        inset: 24px 24px 24px 24px;
+        border-radius: 22px;
+        border: 1px dashed rgba(24, 35, 29, 0.28);
+        background:
+          linear-gradient(135deg, rgba(255,255,255,0.78), rgba(168, 191, 159, 0.18)),
+          repeating-linear-gradient(
+            45deg,
+            rgba(24, 35, 29, 0.04),
+            rgba(24, 35, 29, 0.04) 12px,
+            transparent 12px,
+            transparent 24px
+          );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
+      .floating-card {
+        position: absolute;
+        right: 22px;
+        bottom: 26px;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px 16px;
+        box-shadow: 0 20px 35px rgba(18, 28, 23, 0.08);
+      }
+
+      .floating-card strong {
+        display: block;
+        font-size: 1.4rem;
+        letter-spacing: -0.05em;
+      }
+
+      .section {
+        padding: 42px 0 12px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 22px;
+        margin-bottom: 26px;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .section-heading p {
+        margin: 0;
+        max-width: 520px;
+        color: var(--muted);
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px;
+      }
+
+      .project-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 18px 35px rgba(16, 23, 20, 0.04);
+      }
+
+      .project-visual {
+        height: 250px;
+        background: linear-gradient(135deg, rgba(161, 172, 152, 0.28), rgba(255,255,255,0.6));
+        border-bottom: 1px solid var(--line);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .project-visual::before {
+        content: "Project photo / render";
+        position: absolute;
+        inset: 18px 18px auto auto;
+        background: rgba(255,255,255,0.72);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 10px;
+        font-size: 0.66rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .project-visual::after {
+        content: "";
+        width: 76%;
+        height: 58%;
+        border: 2px dashed rgba(24, 35, 29, 0.2);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.24);
+      }
+
+      .project-content {
+        padding: 24px 22px 26px;
+      }
+
+      .project-tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--green);
+        margin-bottom: 12px;
+      }
+
+      .project-content h3 {
+        margin: 0 0 10px;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        letter-spacing: -0.04em;
+      }
+
+      .project-content p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .project-list {
+        margin: 18px 0 0;
+        padding-left: 18px;
+        color: var(--ink);
+      }
+
+      .project-list li + li {
+        margin-top: 8px;
+      }
+
+      .experience {
+        margin-top: 16px;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 18px;
+      }
+
+      .timeline-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 22px 20px;
+      }
+
+      .timeline-card h3 {
+        margin: 0 0 8px;
+        font-size: 1.2rem;
+      }
+
+      .timeline-card .meta {
+        color: var(--green);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .timeline-card p {
+        margin: 12px 0 0;
+        color: var(--muted);
+      }
+
+      .capabilities {
+        background: var(--panel-strong);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        margin-top: 26px;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .skill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.25);
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .contact {
+        padding: 52px 0 80px;
+      }
+
+      .contact-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        padding: 30px 28px;
+        border-radius: 26px;
+        background: linear-gradient(135deg, var(--green), #233d32);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .contact-card h2 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .contact-card p {
+        margin: 0;
+        color: rgba(255,255,255,0.78);
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .projects,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          gap: 14px;
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .topbar-inner,
+        .section-heading,
+        .contact-card {
+          display: block;
+        }
+
+        .nav {
+          margin-top: 10px;
+          flex-wrap: wrap;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 48px;
+        }
+
+        .hero-visual {
+          min-height: 360px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="page-shell topbar-inner">
+        <a href="#top" class="brand">Abishek <span>Sudhakara</span></a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Mechanical Design · Product Development</div>
+            <h1>
+              Building <span class="highlight">practical</span><br />
+              engineering solutions.
+            </h1>
+            <p class="lead">
+              I’m a mechanical engineer focused on turning product concepts into
+              manufacturable, testable, and reliable hardware. My work spans CAD
+              design, prototyping, manufacturing support, tooling, and process
+              improvement across industrial and product development environments.
+            </p>
+
+            <div class="cta-row">
+              <a href="#projects" class="button primary">View projects</a>
+              <a href="#contact" class="button secondary">Get in touch</a>
+            </div>
+
+            <div class="metrics" aria-label="Highlights">
+              <div class="metric">
+                <strong>4+</strong>
+                <span>Years in design & development</span>
+              </div>
+              <div class="metric">
+                <strong>6+</strong>
+                <span>Product & tooling projects</span>
+              </div>
+              <div class="metric">
+                <strong>10%</strong>
+                <span>Production efficiency gains</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Profile image area">
+            <div class="image-slot">Add a professional image here</div>
+            <div class="floating-card">
+              <span class="eyebrow" style="margin-bottom: 0;">Focus</span>
+              <strong>DFM</strong>
+              <span style="color: var(--muted);">Design for manufacturability</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Selected work</div>
+            <h2>Featured projects.</h2>
+          </div>
+          <p>
+            A selection of hands-on product and manufacturing work spanning concept
+            development, prototyping, validation, and design improvement.
+          </p>
+        </div>
+
+        <div class="projects">
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Product redesign</span>
+              <h3>Lightweight Portable Pump</h3>
+              <p>
+                Redesigned a portable two-stroke pump with a focus on reducing weight
+                while maintaining structural strength, performance, and manufacturability.
+              </p>
+              <ul class="project-list">
+                <li>Explored high-performance plastics as alternatives to conventional materials.</li>
+                <li>Evaluated geometry, wall thickness, and injection-molding constraints.</li>
+                <li>Coordinated prototyping, supplier discussion, and a 100-hour validation trial.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Automation</span>
+              <h3>Automated Hose-Marking System</h3>
+              <p>
+                Developed a semi-automated hose-marking process to improve repeatability,
+                reduce manual effort, and support production consistency.
+              </p>
+              <ul class="project-list">
+                <li>Designed mechanical fixtures for roller and tensioning arrangement.</li>
+                <li>Integrated piezoelectric printing, UV curing, encoder feedback, and PLC controls.</li>
+                <li>Focused on operator safety, process reliability, and manufacturing practicality.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Tooling</span>
+              <h3>Manufacturing Fixtures &amp; Tooling</h3>
+              <p>
+                Designed practical jigs and fixtures to streamline production, improve
+                accuracy, and simplify operator handling in manufacturing lines.
+              </p>
+              <ul class="project-list">
+                <li>Developed production-ready fixtures tailored to process constraints.</li>
+                <li>Improved repeatability and reduced assembly variability.</li>
+                <li>Supported troubleshooting and continuous improvement initiatives.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-label="Project visual placeholder"></div>
+            <div class="project-content">
+              <span class="project-tag">Simulation</span>
+              <h3>Piezoelectric Patch Analysis</h3>
+              <p>
+                Conducted engineering simulation and physical validation to assess the mechanical
+                behavior of a zinc oxide piezoelectric patch under loading conditions.
+              </p>
+              <ul class="project-list">
+                <li>Worked with ANSYS for mechanical simulation and structural assessment.</li>
+                <li>Correlated finite element insights with physical validation.</li>
+                <li>Built a stronger understanding of material behavior and engineering analysis.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Engineering in industry.</h2>
+          </div>
+          <p>
+            Experience across automotive manufacturing, special-purpose machinery, and product development.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-card">
+            <div class="meta">2023 — Present</div>
+            <h3>Mercedes Textiles Limited</h3>
+            <p>
+              Technical Coordinator — Mechanical Product Development, contributing from concept
+              development through CAD, prototyping, testing, and manufacturing support.
+            </p>
+          </div>
+
+          <div class="timeline-card">
+            <div class="meta">2018 — 2019</div>
+            <h3>Bosch Limited</h3>
+            <p>
+              Graduate Apprentice — Design Engineering, supporting design and development for
+              special-purpose machinery, fixtures, tools, and assembly systems.
+            </p>
+          </div>
+
+          <div class="timeline-card">
+            <div class="meta">2018</div>
+            <h3>Continental AG</h3>
+            <p>
+              Engineering Intern, supporting manufacturing engineering activities in ECU and ABS
+              production, including lean improvement and cycle-time analysis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="capabilities section">
+        <div class="page-shell" style="padding: 44px 0;">
+          <div class="section-heading" style="margin-bottom: 0;">
+            <div>
+              <div class="eyebrow">Core strengths</div>
+              <h2>Capabilities.</h2>
+            </div>
+          </div>
+
+          <div class="skills" aria-label="Skills list">
+            <span class="skill">SolidWorks</span>
+            <span class="skill">Autodesk Inventor</span>
+            <span class="skill">CATIA</span>
+            <span class="skill">AutoCAD</span>
+            <span class="skill">ANSYS</span>
+            <span class="skill">FEA Fundamentals</span>
+            <span class="skill">GD&amp;T</span>
+            <span class="skill">DFM</span>
+            <span class="skill">Prototyping</span>
+            <span class="skill">Fixtures &amp; Tooling</span>
+            <span class="skill">Automation</span>
+            <span class="skill">PLC Systems</span>
+            <span class="skill">Injection Molding</span>
+            <span class="skill">Manufacturing Support</span>
+            <span class="skill">Python</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="contact-card">
+          <div>
+            <div class="eyebrow" style="color: rgba(255,255,255,0.72);">Let’s connect</div>
+            <h2>Have a product challenge?</h2>
+            <p>I’m open to opportunities in mechanical design, product development, and manufacturing engineering.</p>
+          </div>
+          <a href="mailto:youremail@example.com" class="button primary" style="background: white; color: var(--green);">Email Me</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
